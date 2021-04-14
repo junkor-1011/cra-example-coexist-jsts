@@ -1,9 +1,9 @@
-import React, { useMemo } from "react";
+import React, { useMemo } from 'react';
 
-const hogeString = "hoge";
+const hogeString = 'hoge';
 
 const hogeFunction = (str, num) => {
-  let _ = "";
+  let _ = '';
   for (let i = 0; i < num + 1; i++) {
     _ += str;
   }
@@ -16,7 +16,7 @@ const Hoge = ({ color }) => {
 
   return (
     <div style={{ color }}>
-      {[...Array(tmp).keys()].map(val => (
+      {[...Array(tmp).keys()].map((val) => (
         <p key={val}>{hogeFunction(hogeString, val)}</p>
       ))}
     </div>
