@@ -4,7 +4,11 @@ import './App.css';
 import Hoge from './Hoge';
 import Foo from './modules/Foo';
 
-function App() {
+type AppProps = Partial<{
+  color: string
+}>
+
+const App: React.FC<AppProps> = ({ color }) => {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,11 +24,12 @@ function App() {
         >
           Learn React
         </a>
+        <div style={{ color: color || 'yellow' }}>Hello, world</div>
         <Hoge color="blue" />
         <Foo />
       </header>
     </div>
   );
-}
+};
 
 export default App;
