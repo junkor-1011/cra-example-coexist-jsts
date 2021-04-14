@@ -1,0 +1,10 @@
+$color: #e30;
+$dummy-test-color: #d0d;
+
+.test {
+  color: $color;
+}
+
+.dummy-text {
+  color: $dummy-test-color;
+}

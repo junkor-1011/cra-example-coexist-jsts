@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
 import Hoge from './Hoge';
 import Foo from './modules/Foo';
+import './App.scss';
+import styles from './dummy.module.scss';
 
 type AppProps = Partial<{
   color: string
@@ -27,6 +28,12 @@ const App: React.FC<AppProps> = ({ color }) => {
         <div style={{ color: color || 'yellow' }}>Hello, world</div>
         <Hoge color="blue" />
         <Foo />
+        <div className={`test-class ${styles.test}`}>
+          hello css-modules with sass
+        </div>
+        <div className={styles['dummy-text']}>
+          css-modules dummy-text
+        </div>
       </header>
     </div>
   );
